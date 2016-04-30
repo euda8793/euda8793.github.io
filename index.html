@@ -79,7 +79,7 @@ function update() {
 	else
 	{
 			if(rest == 'l'){
-				player.animations.play('standleft');
+				player.animations.play('blastright');
 
 
 			}else{
@@ -88,11 +88,7 @@ function update() {
 
 			}
 	}
-	if(cursors.up.isDown){
 
-		player.animations.play('blastright');
-
-	}
 
 	//  Allow the player to jump if they are touching the ground.
 	if (cursors.up.isDown && player.x == game.stage.heigh)
