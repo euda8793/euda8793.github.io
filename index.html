@@ -43,7 +43,7 @@ function create() {
 	player.animations.add('right', [1, 2, 3, 4], 10, true);
 	player.animations.add('standleft', [12, 13], 1.5, true);
 	player.animations.add('standright', [10, 11], 1.5, true);
-	player.animations.add('blastright', [14, 18], 12, true);
+	player.animations.add('blastright', [14, 17], 12, true);
 
 	cursors = game.input.keyboard.createCursorKeys();
 
@@ -76,10 +76,16 @@ function update() {
 
 
 	}
+	else if(cursors.up.isDown){
+
+		player.animations.play('blastright');
+	}
 	else
 	{
 			if(rest == 'l'){
-				player.animations.play('blastright');
+
+				player.animations.play('standright');
+
 
 
 			}else{
