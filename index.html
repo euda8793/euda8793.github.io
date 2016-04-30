@@ -43,7 +43,7 @@ function create() {
 	player.animations.add('right', [1, 2, 3, 4], 10, true);
 	player.animations.add('standleft', [12, 13], 1.5, true);
 	player.animations.add('standright', [10, 11], 1.5, true);
-
+	player.animations.add('blast', [14, 15, 16, 17], 10, true);
 	cursors = game.input.keyboard.createCursorKeys();
 
 
@@ -90,6 +90,10 @@ function update() {
 			}
 	}
 
+
+if(cursors.up.isDown){
+	player.animations.play('blastright');
+}
 
 	//  Allow the player to jump if they are touching the ground.
 	if (cursors.up.isDown && player.x == game.stage.height)
