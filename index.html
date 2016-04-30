@@ -19,12 +19,12 @@ var player;
 function preload() {
 
 	 game.load.spritesheet('dude', 'assets/al.png', 120, 120);
-	 game.stage.background = '#ffffff';
+
 }
 
 function create() {
 
-
+	game.stage.backgroundColor = "#ffffff";
 	player = game.add.sprite(32, game.world.height - 150, 'dude');
 
 }
